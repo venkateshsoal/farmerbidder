@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/users/register" method="POST">
+    <div>
+        <input type="text" id ="name" placeholder="Name" required/>
+    </div>
+
+    <div>
+        <input type="email" id ="email" placeholder="Email" required/>
+    </div>
+
+    <div>
+        <input type="phonenumber" id ="phonenumber" placeholder="Phonenumber" required/>
+    </div>
+
+    <div>
+        <label for="catg">Choose a catagory:</label>
+        <select id="catg" name="catg">
+            <option value="Farmer">Farmer</option>
+            <option value="Buyer">Buyer</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="submit" value="Register" />
+    </div>
+
+    <a href="/users/login">Already registered? Login here</a>
+    </form>
+
+    </body>
+</html>
