@@ -7,16 +7,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login</title>    
 </head>
 <body>
     <h1>LOGIN</h1>
+
+    <ul>
+        <% if(messages.success_msg) { %>
+        <li><%= messages.success_msg %></li>
+        <% } %>
+      </ul>
+      
     <form action="/users/login" method="POST">
         <div>
-            <input type="phonenumber" id ="phonenumber" placeholder="Phonenumber" required/>
+            <input type="phonenumber" id ="phonenumber" name="phonenumber" placeholder="Phonenumber" required/>
         </div>
         <div>
-            <input type="OTP" id ="OTP" placeholder="Otp" required/>
+            <input type="OTP" id ="OTP" name="OTP" placeholder="Otp" required/>
         </div>
         <div>
             <input type="submit" value="Login" />
